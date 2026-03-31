@@ -17,31 +17,6 @@
         <surefire-plugin.version>3.5.3</surefire-plugin.version>
     </properties>
 
-    <repositories>
-        <repository>
-            <id>ibm-enterprise-maven-repository</id>
-            <url>https://maven.repository.ibm.com/releases/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
-    <pluginRepositories>
-        <pluginRepository>
-            <id>ibm-enterprise-maven-repository</id>
-            <url>https://maven.repository.ibm.com/releases/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </pluginRepository>
-    </pluginRepositories>
-
     <dependencyManagement>
         <dependencies>
             <dependency>
