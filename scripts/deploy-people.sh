@@ -4,14 +4,14 @@ USERXX=$1
 
 if [ -z "$USERXX" -o "$USERXX" = "userXX" ]
   then
-    echo "Usage: Input your username like deploy-people.sh your-ibm-email-id-com"
+    echo "Usage: Input your username like deploy-people.sh <userid>"
     exit;
 fi
 
-echo "Your project name is ${USERXX}-project"
+echo "Your project name is ${USERXX}-quarkus"
 echo Deploy people service........
 
-oc project $USERXX-project
+oc project $USERXX-quarkus
 oc delete dc,deployment,bc,build,svc,route,pod,is --all
 
 echo "Waiting 30 seconds to finialize deletion of resources..."
