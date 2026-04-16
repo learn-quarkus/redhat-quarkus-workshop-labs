@@ -5,7 +5,10 @@ metadata:
 spec:
   config:
     exporters:
-      debug: {}
+      otlp/tempo:
+        endpoint: tempo-tempo:4317
+        tls:
+          insecure: true
     receivers:
       otlp:
         protocols:
@@ -16,7 +19,5 @@ spec:
     service:
       pipelines:
         traces:
-          exporters:
-            - debug
-          receivers:
-            - otlp
+          receivers: [otlp]
+          exporters: [otlp/tempo]
